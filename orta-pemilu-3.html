@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pondasi Pemilu</title>
+</head>
+<body style="background-color: #fff !important">
+  <script src="login-page.js"></script>
+  <script src="button_white.js"></script>
+  <nav
+    id="navbar"
+    class="navbar navbar-expand-lg sticky-top w-100 zindex-sticky"
+    style="transition: all 0.2s; z-index: 10 !important; background-color: #fff"
+  >
+    <div
+      id="navbar-container"
+      class="container-fluid mx-5 my-4"
+      style="
+        transition: all 0.5s;
+        transition-timing-function: cubic-bezier(1, -0.3, 0, 1);
+      "
+    >
+      <a class="navbar-brand" href="index.html"
+        ><img
+          class="animate-500"
+          src="assets/logo_red.svg"
+          alt="Pondasi Pemilu"
+          width="150"
+        />
+      </a>
+      <ul
+        id="navbar-nav"
+        class="navbar-nav justify-content-end align-items-center fw-semibold"
+      >
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="./index.html"
+            >Beranda</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link active animate-500"
+            aria-current="page"
+            style="color: #fff; background-color: #811c1c"
+            href="#"
+            >Orta Pemilu</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="./surat-suara.html"
+            >Surat Suara</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="./poindasi.html"
+            >POINdasi</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="qna.html"
+            >QnA</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="#"
+            >Kontak</a
+          >
+        </li>
+        <div
+          id="search-box"
+          class="input-box ms-5 px-1 d-flex align-items-center text-white h-100"
+          style="
+            border-radius: 20pt;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #811c1c;
+            width: 18em;
+          "
+        >
+          <input
+            readonly
+            value="sistem proporsional ter"
+            id="search-input"
+            type="text"
+            class="form-control bg-transparent border border-0 fw-semibold primary-element"
+          />
+          <svg
+            id="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#811c1c"
+            class="bi bi-search me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </div>
+        <img
+          src="assets/Icons/user.png"
+          class="ms-3"
+          height="45px"
+          style="
+            transform: translateY(3px);
+            filter: drop-shadow(0px 0px 3px #00000088);
+          "
+        />
+      </ul>
+    </div>
+  </nav>
+  <div class="px-5 pb-3 primary-element fw-bold position-fixed bg-white w-100">
+    <a
+      class="link-underline link-underline-opacity-0 primary-element"
+      href="./index.html"
+      >Beranda</a
+    >
+    >
+    <a
+      class="link-underline link-underline-opacity-0 primary-element"
+      href="./orta-pemilu.html"
+      >Orta Pemilu</a
+    >
+    > Bagian 1 > Artikel 2
+  </div>
+  <div class="my-5 d-flex flex-column align-items-center w-100">
+    <div class="d-flex flex-column align-items-center ms-5">
+      <h2 class="primary-element">Artikel 2 Bagian 2</h2>
+      <h2 class="primary-element mb-5 w-75" style="font-size: 2.5em">
+        Sistem Pemilu Proporsional Terbuka
+      </h2>
+    </div>
+    <div class="container px-3">
+      <div class="row">
+        <div class="col">
+          <div class="d-flex flex-column align-items-start">
+            <img src="./assets/image1.png" />
+            <h2 class="primary-element mt-2 mb-4">Lorem Ipsum</h2>
+          </div>
+        </div>
+        <div class="col">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            non commodo quam. Fusce ultrices, tortor et laoreet malesuada, nibh
+            massa porta ipsum, sit amet rutrum leo est at dolor. Nullam pulvinar
+            turpis sit amet augue viverra, eget vulputate mauris luctus. Orci
+            varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Cras vehicula tellus nec enim auctor, eu blandit
+            ligula eleifend. Phasellus massa odio, dapibus vel efficitur vel,
+            accumsan vel felis. Aenean mauris velit, efficitur eget urna sit
+            amet, dictum pulvinar enim. Quisque posuere imperdiet massa et
+            viverra. Donec mollis interdum mi interdum rhoncus. Nullam dapibus
+            iaculis lacus, bibendum molestie urna dictum ac.
+            <br /><br />
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Integer placerat elit ut faucibus rhoncus.
+            Mauris non felis sed ex tempor gravida non non dolor. Fusce eget
+            neque lorem. Aenean commodo viverra arcu, ac venenatis nisl pharetra
+            vehicula. Nulla rutrum faucibus nulla id gravida. In lorem felis,
+            aliquam nec rhoncus a, mattis id massa. Mauris vestibulum, erat et
+            mollis imperdiet, ipsum mi sodales nisl, ultrices lacinia quam purus
+            eu lorem. Fusce tristique scelerisque accumsan. In lorem felis,
+            aliquam nec rhoncus a, mattis id massa. Mauris vestibulum, erat et
+            mollis imperdiet, ipsum mi sodales nisl, ultrices lacinia quam purus
+            eu lorem. Fusce tristique scelerisque accumsan.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <p>
+          Aliquam sollicitudin placerat laoreet. Morbi volutpat ante ut
+          malesuada euismod. Aenean tempus aliquam nibh. Vivamus leo libero,
+          mattis eu mauris et, tempus mollis nibh. Pellentesque quis varius
+          turpis. Proin facilisis, libero in lobortis mollis, est nisl semper
+          mi, at tempus sapien est in neque. Vestibulum in lectus non nisi
+          semper convallis. Sed id euismod ipsum, auctor blandit eros. Mauris in
+          vestibulum quam, sit amet pellentesque urna. Vivamus tristique congue
+          metus, vel ornare felis dapibus vel. Orci varius natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Mauris sed velit
+          mi. Morbi sit amet mollis erat, id pellentesque ipsum. Suspendisse
+          sodales mi sit amet lacus ultricies dignissim. Fusce sit amet
+          vestibulum sem, vitae pharetra libero.
+        </p>
+        <br />
+        <p>
+          Duis quis ipsum ac urna blandit placerat. Cras nec hendrerit mauris.
+          Etiam ut pretium purus. Vestibulum vestibulum, dui a ultrices gravida,
+          elit tellus porta velit, a vulputate ante ipsum id felis. Proin
+          porttitor hendrerit est non volutpat. Nunc lacinia neque lectus, quis
+          accumsan erat semper ut. Phasellus eget ipsum non nibh condimentum
+          dignissim sit amet quis mauris. Donec ullamcorper non nunc vitae
+          dictum. Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>

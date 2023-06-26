@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pondasi Pemilu</title>
+</head>
+<body
+  style="
+    background-image: url(assets/Background2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    background-attachment: fixed;
+  "
+>
+  <script src="login-page.js"></script>
+  <script src="button_white.js"></script>
+  <nav
+    id="navbar"
+    class="navbar navbar-expand-lg sticky-top w-100 zindex-sticky"
+    style="
+      z-index: 10 !important;
+      background: linear-gradient(#811c1c 90%, #811c1c00 100%);
+    "
+  >
+    <div
+      id="navbar-container"
+      class="container-fluid mx-5 my-4"
+      style="
+        transition: all 0.5s;
+        transition-timing-function: cubic-bezier(1, -0.3, 0, 1);
+      "
+    >
+      <a class="navbar-brand" href="index.html"
+        ><img
+          class=""
+          src="assets/logo_white_t.png"
+          alt="Pondasi Pemilu"
+          width="150"
+        />
+      </a>
+      <ul
+        id="navbar-nav"
+        class="navbar-nav justify-content-end align-items-center fw-semibold zindex-sticky"
+      >
+        <li class="nav-item me-5">
+          <a class="nav-link" style="color: #fff" href="./index.html"
+            >Beranda</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            style="color: #fff"
+            href="./orta-pemilu.html"
+            >Orta Pemilu</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link"
+            style="color: #811c1c; background-color: #fff"
+            href="#"
+            >Surat Suara</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link text-white" href="./poindasi.html">POINdasi</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link" style="color: #fff" href="./qna.html">QnA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: #fff" href="#">Kontak</a>
+        </li>
+        <div
+          id="search-box"
+          class="input-box ms-5 px-1 d-flex align-items-center text-white h-100"
+          style="
+            border-radius: 20pt;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #fff;
+            width: 18em;
+          "
+        >
+          <input
+            readonly
+            value="sistem proporsional ter"
+            id="search-input"
+            type="text"
+            class="form-control bg-transparent border border-0 fw-semibold text-white"
+          />
+          <svg
+            id="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#fff"
+            class="bi bi-search me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </div>
+        <img
+          src="assets/Icons/user.png"
+          class="ms-3"
+          height="45px"
+          style="
+            transform: translateY(3px);
+            filter: drop-shadow(0px 0px 3px #00000088);
+          "
+        />
+      </ul>
+    </div>
+  </nav>
+  <div class="px-5 pb-5 text-white fw-bold position-fixed w-100">
+    <a
+      class="link-underline link-underline-opacity-0 text-white"
+      href="./index.html"
+      >Beranda</a
+    >
+    > Surat Suara
+  </div>
+  <div
+    class="d-flex flex-column justify-content-center"
+    style="margin: 100px 40vh"
+  >
+    <h2 class="" style="font-size: 1.2em">MODEL SURAT SUARA</h2>
+    <h2
+      class="mb-5"
+      style="font-size: 3em; transform: scaleY(0.9) translateY(-5px)"
+    >
+      PEMILU PROPORSIONAL TERBUKA
+    </h2>
+    <img src="assets/suratsuara1.png" style="transform: translateX(15px)" />
+  </div>
+  <div
+    class="d-flex flex-column justify-content-center"
+    style="margin: 150px 40vh 0px 40vh"
+  >
+    <h2 class="" style="font-size: 1.2em">MODEL SURAT SUARA</h2>
+    <h2
+      class="mb-5"
+      style="font-size: 3em; transform: scaleY(0.9) translateY(-5px)"
+    >
+      PEMILU PROPORSIONAL TERTUTUP
+    </h2>
+    <img src="assets/suratsuara2.png" style="transform: translateX(15px)" />
+  </div>
+  <div
+    id="login-overlay"
+    class="position-fixed bg-white vw-100 vh-100 animate-1000 animate-easeinout"
+    style="
+      z-index: 11;
+      left: 0%;
+      top: 0%;
+      clip-path: circle(0% at 91% 9.5%);
+      overflow: hidden;
+    "
+  >
+    <div class="bg-white d-flex flex-row" style="margin: 150px 180px">
+      <button
+        class="position-absolute noshadow border-0"
+        onclick="toggle_login()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="64"
+          height="64"
+          fill="currentColor"
+          class="bi bi-x position-absolute"
+          viewBox="0 0 16 16"
+          style="transform: translate(-100%, -100%)"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+      </button>
+      <div class="d-flex flex-column align-items-center w-100">
+        <img src="assets/logo_red.svg" width="30%" />
+        <div
+          class="d-flex flex-column justify-content-center align-items-center mx-4"
+        >
+          <p
+            class="text-start fw-bolder w-75 my-4"
+            style="
+              font-family: 'Kanit' !important;
+              font-size: 3em;
+              font-weight: 900;
+              transition: all 10ms;
+              width: 40%;
+              user-select: none;
+              color: #811c1c !important;
+              transform: scaleY(0.95);
+            "
+          >
+            Masuk dan jadilah generasi melek politik Indonesia.
+          </p>
+          <p class="text-start w-75">
+            Nikmati keuntungan dengan mengumpulkan poin lewat membaca dan
+            menonton konten Pondasi Pemilu. Semua dalam satu akun!
+            <a href="_blank" style="color: #811c1c">Pelajari selengkapnya</a>
+          </p>
+        </div>
+      </div>
+      <div class="w-100">
+        <div
+          class="d-flex flex-column align-items-center p-3 justify-content-center w-100 border-25px"
+          style="background-color: rgb(222, 222, 222)"
+        >
+          <div class="input-group mb-3">
+            <input
+              readonly
+              value="email@gmail.com"
+              id="email"
+              type="text"
+              class="form-control border-15px p-3 ff-poppins border-0"
+              placeholder="Email"
+              aria-label="Email"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              readonly
+              value="12345678asdasda"
+              id="password"
+              type="password"
+              class="form-control border-15px p-3 ff-poppins border-0"
+              placeholder="Password"
+              aria-label="Password"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <a
+            class="btn w-100 border-15px p-3 mb-3 primary-color animate-500 fw-bold"
+            href="./home-logged.html"
+          >
+            Masuk
+          </a>
+          <div class="mt-2 d-flex justify-content-center">
+            <p>
+              <a
+                class="link-opacity-100 link-underline-opacity-0 primary-element fw-semibold"
+                >Lupa Kata Sandi?</a
+              >
+            </p>
+          </div>
+          <hr
+            class="border border-2 w-75 border-success"
+            style="border-color: #811c1c !important"
+          />
+          <button
+            class="btn btn-success w-50 border-15px p-3 my-3 animate-500 fw-bold"
+            type="submit"
+          >
+            Masuk
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

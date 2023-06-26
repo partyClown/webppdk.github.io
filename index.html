@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pondasi Pemilu</title>
+</head>
+<body id="bg-reddish">
+  <script src="scripts.js"></script>
+  <script src="login-page.js"></script>
+  <script src="button.js"></script>
+  <nav
+    id="navbar"
+    class="navbar navbar-expand-lg position-fixed w-100 zindex-sticky"
+    style="transition: all 0.2s; z-index: 10 !important; background-color: #570a0000;"
+  >
+    <div
+      id="navbar-container"
+      class="container-fluid mx-5 my-4"
+      style="
+        transition: all 0.5s;
+        transition-timing-function: cubic-bezier(1, -0.3, 0, 1);
+      "
+    >
+      <a class="navbar-brand" href="#"
+        ><img
+          class="animate-500"
+          src="assets/logo_red.svg"
+          alt="Pondasi Pemilu"
+          width="150"
+          style="filter: saturate(0%) brightness(500%)"
+        />
+      </a>
+      <ul
+        id="navbar-nav"
+        class="navbar-nav justify-content-end align-items-center fw-semibold"
+      >
+        <li class="nav-item me-5">
+          <a
+            class="nav-link active animate-500"
+            aria-current="page"
+            style="color: #fff"
+            href="#"
+            >Beranda</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #fff"
+            href="./orta-pemilu.html"
+            >Orta Pemilu</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #fff"
+            href="./surat-suara.html"
+            >Surat Suara</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #fff"
+            href="./poindasi.html"
+            >POINdasi</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #fff"
+            href="./qna.html"
+            >QnA</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #fff"
+            href="#"
+            >Kontak</a
+          >
+        </li>
+        <div
+          id="search-box"
+          class="input-box ms-5 px-1 d-flex align-items-center text-white h-100"
+          style="
+            border-radius: 20pt;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #fff;
+            width: 18em;
+          "
+        >
+          <input
+          readonly
+            value="sistem proporsional ter"
+            id="search-input"
+            type="text"
+            class="form-control bg-transparent border border-0 fw-semibold text-white"
+          />
+          <svg
+            id="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </div>
+        <button
+          onclick="toggle_login()"
+          id="login-button"
+          type="button"
+          class="btn btn-secondary mx-3 h-100 fw-semibold"
+          style="
+            border-radius: 20pt;
+            width: 6em;
+            background-color: #fff;
+            color: #000;
+          "
+        >
+          Log In
+        </button>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <div class="position-relative d-flex" style="height: 1700pt; z-index: 1">
+      <div
+        id="sub-1"
+        class="position-fixed d-flex justify-content-center align-items-center vh-100 w-100"
+      >
+        <div
+          class="d-flex justify-content-center align-items-center w-100"
+          style="height: 80vh"
+        >
+          <div class="d-flex justify-content-center align-items-end w-100">
+            <h1
+              id="choose"
+              class="text-center fw-bold first-fade"
+              style="
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+                font-size: 4em;
+                font-weight: 900;
+                transition: all 10ms;
+                width: 40%;
+                user-select: none;
+                color: #fff;
+                filter: brightness(1000%);
+                transform: translateY(-1em) scaleY(0.8);
+              "
+            >
+              KENAPA KAMU HARUS MEMILIH?
+            </h1>
+            <div
+              id="ballotbg"
+              class="w-100 h-100 position-absolute"
+              style="
+                z-index: -7;
+                top: 0%;
+                width: 100%;
+                height: 10em;
+                background-color: rgba(126, 28, 0, 1);
+              "
+            ></div>
+            <img
+              id="hand-bg"
+              class="position-absolute"
+              src="assets/hand-animation/1x/hand-bg.png"
+              style="top: 0%; left: 39%; z-index: -5; width: 40%"
+            />
+            <img
+              id="hand-fg"
+              class="position-absolute"
+              src="assets/hand-animation/1x/hand-fg.png"
+              style="top: 29%; left: 50.5%; z-index: -2; width: 9%"
+            />
+            <img
+              id="paper"
+              class="position-absolute"
+              src="assets/hand-animation/1x/paper.png"
+              style="top: 50%; left: 40%; z-index: -3; width: 18%"
+            />
+            <svg
+              id="ballot2"
+              class="position-absolute first-fade"
+              height="500"
+              width="600"
+              style="
+                z-index: -3;
+                left: 50%;
+                bottom: -70%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop
+                    offset="50%"
+                    style="stop-color: rgb(255, 255, 255); stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: rgb(255, 255, 255); stop-opacity: 0"
+                  />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grad1)"></rect>
+            </svg>
+            <svg
+              id="box"
+              class="position-absolute first-fade"
+              height="350"
+              width="600"
+              style="
+                z-index: -4;
+                left: 50%;
+                top: 90%;
+                transform: translate(-50%, -50%);
+              "
+            >
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="-20%" y2="100%">
+                  <stop
+                    offset="0%"
+                    style="stop-color: rgb(255, 255, 255); stop-opacity: 1"
+                  />
+                  <stop
+                    offset="50%"
+                    style="stop-color: rgb(190, 182, 182); stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grad1)"></rect>
+            </svg>
+            <img
+              id="closure-bot-3"
+              class="position-absolute"
+              src="assets/closure/closure_3.png"
+              style="top: -40%; left: 4%; z-index: -5; width: 95%"
+            />
+            <img
+              id="closure-bot-2"
+              class="position-absolute"
+              src="assets/closure/closure_2.png"
+              style="top: -30%; left: 1%; z-index: -2; width: 95%"
+            />
+            <img
+              id="closure-bot-1"
+              class="position-absolute"
+              src="assets/closure/closure_1.png"
+              style="top: -7%; left: -6%; z-index: 0; width: 95%"
+            />
+
+            <img
+              id="closure-top-3"
+              class="position-absolute"
+              src="assets/closure/closure_3.png"
+              style="
+                top: 3%;
+                right: 5%;
+                z-index: -7;
+                width: 95%;
+                rotate: 180deg;
+              "
+            />
+            <img
+              id="closure-top-2"
+              class="position-absolute"
+              src="assets/closure/closure_2.png"
+              style="
+                top: -8%;
+                right: 1%;
+                z-index: -3;
+                width: 95%;
+                rotate: 180deg;
+              "
+            />
+            <img
+              id="closure-top-1"
+              class="position-absolute"
+              src="assets/closure/closure_1.png"
+              style="
+                top: -18%;
+                right: -5%;
+                z-index: -1;
+                width: 95%;
+                rotate: 180deg;
+              "
+            />
+            <div
+              id="paragraph"
+              class="position-absolute w-50 fw-semibold animate-1000"
+              style="top: 55%; filter: opacity(0%)"
+            >
+              <p class="first-fade">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas non commodo quam. Fusce ultrices, tortor et laoreet
+                malesuada, nibh massa porta ipsum, sit amet rutrum leo est at
+                dolor. Nullam pulvinar turpis sit amet augue viverra, eget
+                vulputate mauris luctus. Orci varius natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus. Cras vehicula
+                tellus nec enim auctor, eu blandit ligula eleifend. Phasellus
+                massa odio, dapibus vel efficitur vel, accumsan vel felis.
+                Aenean mauris velit, efficitur eget urna sit amet, dictum
+                pulvinar enim. Quisque posuere imperdiet massa et viverra. Donec
+                mollis interdum mi interdum rhoncus. Nullam dapibus iaculis
+                lacus, bibendum molestie urna dictum ac.
+              </p>
+              <p class="first-fade">
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas. Integer placerat elit ut
+                faucibus rhoncus. Mauris non felis sed ex tempor gravida non non
+                dolor. Fusce eget neque lorem. Aenean commodo viverra arcu, ac
+                venenatis nisl pharetra vehicula. Nulla rutrum faucibus nulla id
+                gravida. In lorem felis, aliquam nec rhoncus a, mattis id massa.
+                Mauris vestibulum, erat et mollis imperdiet, ipsum mi sodales
+                nisl, ultrices lacinia quam purus eu lorem. Fusce tristique
+                scelerisque accumsan. In lorem felis, aliquam nec rhoncus a,
+                mattis id massa. Mauris vestibulum, erat et mollis imperdiet,
+                ipsum mi sodales nisl, ultrices lacinia quam purus eu lorem.
+                Fusce tristique scelerisque accumsan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="login-overlay"
+      class="position-fixed bg-white vw-100 vh-100 animate-1000 animate-easeinout"
+      style="
+        z-index: 11;
+        left: 0%;
+        top: 0%;
+        clip-path: circle(0% at 91% 9.5%);
+        overflow: hidden;
+      "
+    >
+      <div class="bg-white d-flex flex-row" style="margin: 150px 180px">
+        <button
+          class="position-absolute noshadow border-0"
+          onclick="toggle_login()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            fill="currentColor"
+            class="bi bi-x position-absolute"
+            viewBox="0 0 16 16"
+            style="transform: translate(-100%, -100%)"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </button>
+        <div class="d-flex flex-column align-items-center w-100">
+          <img src="assets/logo_red.svg" width="30%" />
+          <div
+            class="d-flex flex-column justify-content-center align-items-center mx-4"
+          >
+            <p
+              class="text-start fw-bolder w-75 my-4"
+              style="
+                font-family: 'Kanit' !important;
+                font-size: 3em;
+                font-weight: 900;
+                transition: all 10ms;
+                width: 40%;
+                user-select: none;
+                color: #811c1c !important;
+                transform: scaleY(.95) ;
+              "
+            >
+              Masuk dan jadilah generasi melek politik Indonesia.
+        </p>
+            <p class="text-start w-75">
+              Nikmati keuntungan dengan mengumpulkan poin lewat membaca dan
+              menonton konten Pondasi Pemilu. Semua dalam satu akun!
+              <a href="_blank" style="color: #811c1c">Pelajari selengkapnya</a>
+            </p>
+          </div>
+        </div>
+        <div class="w-100">
+          <div
+            class="d-flex flex-column align-items-center p-3 justify-content-center w-100 border-25px"
+            style="background-color: rgb(222, 222, 222)"
+          >
+            <div class="input-group mb-3">
+              <input
+              readonly
+                value="email@gmail.com"
+                id="email"
+                type="text"
+                class="form-control border-15px p-3 ff-poppins border-0"
+                placeholder="Email"
+                aria-label="Email"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+              readonly
+                value="12345678asdasda"
+                id="password"
+                type="password"
+                class="form-control border-15px p-3 ff-poppins border-0"
+                placeholder="Password"
+                aria-label="Password"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <a
+              class="btn w-100 border-15px p-3 mb-3 primary-color animate-500 fw-bold"
+              href="./home-logged.html"
+              
+            >
+              Masuk
+          </a>
+            <div class="mt-2 d-flex justify-content-center">
+              <p>
+                <a
+                  class="link-opacity-100 link-underline-opacity-0 primary-element fw-semibold"
+                  >Lupa Kata Sandi?</a
+                >
+              </p>
+            </div>
+            <hr
+              class="border border-2 w-75 border-success"
+              style="border-color: #811c1c !important"
+            />
+            <button
+              class="btn btn-success w-50 border-15px p-3 my-3 animate-500 fw-bold"
+              type="submit"
+            >
+              Masuk
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex position-absolute overflow-x-hidden overflow-y-visible w-100 justify-content-center"
+      style="height: 1200"
+    >
+      <img
+        src="assets/hand-animation/1x/scrapofpaper.png"
+        style="
+          width: 120%;
+          object-fit: cover;
+          z-index: 1;
+          transform: translateY(0%);
+        "
+      />
+      <div
+        id="transition-gradient"
+        class="position-absolute overflow-hidden w-100 h-100"
+        style="
+          left: 0%;
+          top: 0%;
+          background: linear-gradient(
+            180deg,
+            rgba(87, 10, 0, 0) 0%,
+            rgb(87, 10, 0) 30%,
+            rgba(87, 10, 0, 1) 50%,
+            rgba(87, 10, 0, 0) 100%
+          );
+          z-index: 3;
+        "
+      ></div>
+    </div>
+  </div>
+  <div
+    id="last-body"
+    class="w-100 h-100 position-absolute d-flex flex-column align-items-center"
+    style="
+      z-index: 2;
+      transform: translateY(50%);
+      background-color: rgba(87, 10, 0, 0);
+    "
+  >
+    <div
+      class="w-100 h-100 d-flex flex-column align-items-center text-center"
+      style="transform: translateY(35%)"
+    >
+      <h1>FITUR UTAMA PONDASI PEMILU</h1>
+      <div
+        class="d-flex flex-row align-items-center w-75 justify-content-evenly px-3"
+      >
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="assets/features/feature_suratsuara.png"
+            style="height: auto; width: 60%"
+          />
+          <h2 class="position-absolute feature-header">Orta Pemilu</h2>
+          <p class="white-text my-3" style="height: auto; width: 60%">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="assets/features/feature_suratsuara.png"
+            style="height: auto; width: 60%"
+          />
+          <h2 class="position-absolute feature-header">Surat Suara</h2>
+          <p class="white-text my-3" style="height: auto; width: 60%">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="assets/features/feature_qna.png"
+            style="height: auto; width: 75%"
+          />
+          <h2 class="position-absolute feature-header">QnA</h2>
+          <p class="white-text my-3" style="height: auto; width: 60%">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex flex-column w-75" style="margin-top: 150px">
+        <div class="d-flex flex-row justify-content-between me-4">
+          <div class="d-flex justify-content-start align-items-start">
+            <h1 class="" style="text-align: start">Tentang Kami</h1>
+          </div>
+          <div class="d-flex flex-column align-items-start" style="width: 45vw">
+            <h1 style="text-align: start">Pondasi Pemilu</h1>
+            <p class="text-white">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+              consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing
+              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+              nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+              aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+              consectetuer adipiscing elit, sed diam nonummy nibh euismod
+              tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+              enim ad minim veniam, quis nostrud exerci tation ullamcorper
+              suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between me-4">
+          <div class="d-flex justify-content-start align-items-start">
+            <h1 class="">Visi</h1>
+          </div>
+          <div
+            class="d-flex flex-column align-items-start justify-content-start"
+            style="width: 45vw"
+          >
+            <p class="text-white my-3">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.
+            </p>
+          </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between me-4">
+          <div class="d-flex justify-content-start align-items-start">
+            <h1 class="">Misi</h1>
+          </div>
+          <div
+            class="d-flex flex-column align-items-start justify-content-start"
+            style="width: 45vw"
+          >
+            <p class="text-white my-3">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+              consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing
+              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+              nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+              aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column w-100 align-items-center"
+        style="margin-top: 150px"
+      >
+        <h1>Yuk, Kenali Kami Lebih Dekat!</h1>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>Founder</h2>
+                <h3>Founder</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>Co-Founder</h2>
+                <h3>Co-Founder</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>CTO</h2>
+                <h3>Chief Technology Officer</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>CFO</h2>
+                <h3>Chief Marketing Officer</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div
+                class="d-flex flex-column align-items-center"
+                style="margin-bottom: 150px"
+              >
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>Head Sales</h2>
+                <h3>Head of Sales</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>Head of Customer Support</h2>
+                <h3>Head of Customer Support</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>Content Writer/Copywriter</h2>
+                <h3>Content Writer/Copywriter</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <svg height="200" width="200">
+                  <circle cx="100" cy="100" r="90" fill="#eee" />
+                </svg>
+                <h2>Data Analyst</h2>
+                <h3>Data Analyst</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column w-100 align-items-center"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(60, 60, 60, 1) 0%,
+            rgba(28, 28, 28, 1) 77%
+          );
+        "
+      >
+        <h1 class="my-5">Social Media</h1>
+        <div class="container-md text-center w-75" style="margin-left: 40vh;">
+          <div class="row mb-2">
+            <div class="col">
+              <div class="d-flex flex-row w-100 align-items-center">
+                <img src="assets/Icons/logo-insta.png" height="25px" class="me-3"/>
+                <h2>@pondasipemilu</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-row w-100 align-items-center">
+                <img src="assets/Icons/logo-wa.png" height="25px" class="me-3"/>
+                <h2>+62 813-3816-0906</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col">
+              <div class="d-flex flex-row w-100 align-items-center">
+                <img src="assets/Icons/logo-twitter.png" height="25px" class="me-3"/>
+                <h2>@pondasipemilu</h3>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-row w-100 align-items-center">
+                <img src="assets/Icons/logo-mail.png" height="25px" class="me-3"/>
+                <h2>pondasipemilu@gmail.com</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col">
+              <div class="d-flex flex-row w-100 align-items-center">
+                <img src="assets/Icons/logo-phone.png" height="25px" class="me-3"/>
+                <h2>+62 214-4060-013</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="w-75 text-center text-light opacity-50 my-5">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+        </p>
+        <p class="w-75 text-center text-light opacity-50 mb-4">
+          © 2023 Pondasi Pemilu, All right reserved
+        </p>
+      </div>
+    </div>
+  </div>
+</body>

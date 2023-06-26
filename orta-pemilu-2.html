@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"
+  ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pondasi Pemilu</title>
+</head>
+<body style="background-color: #fff !important">
+  <script src="login-page.js"></script>
+  <script src="button_white.js"></script>
+  <nav
+    id="navbar"
+    class="navbar navbar-expand-lg sticky-top w-100 zindex-sticky"
+    style="transition: all 0.2s; z-index: 10 !important; background-color: #fff"
+  >
+    <div
+      id="navbar-container"
+      class="container-fluid mx-5 my-4"
+      style="
+        transition: all 0.5s;
+        transition-timing-function: cubic-bezier(1, -0.3, 0, 1);
+      "
+    >
+      <a class="navbar-brand" href="index.html"
+        ><img
+          class="animate-500"
+          src="assets/logo_red.svg"
+          alt="Pondasi Pemilu"
+          width="150"
+        />
+      </a>
+      <ul
+        id="navbar-nav"
+        class="navbar-nav justify-content-end align-items-center fw-semibold"
+      >
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="./index.html"
+            >Beranda</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            class="nav-link active animate-500"
+            aria-current="page"
+            style="color: #fff; background-color: #811c1c"
+            href="#"
+            >Orta Pemilu</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="./surat-suara.html"
+            >Surat Suara</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="./poindasi.html"
+            >POINdasi</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="qna.html"
+            >QnA</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            onmouseenter="hoverEffect(this)"
+            onmouseleave="exitHoverEffect(this)"
+            class="nav-link animate-500"
+            style="color: #811c1c"
+            href="#"
+            >Kontak</a
+          >
+        </li>
+        <div
+          id="search-box"
+          class="input-box ms-5 px-1 d-flex align-items-center text-white h-100"
+          style="
+            border-radius: 20pt;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #811c1c;
+            width: 18em;
+          "
+        >
+          <input
+            readonly
+            value="sistem proporsional ter"
+            id="search-input"
+            type="text"
+            class="form-control bg-transparent border border-0 fw-semibold primary-element"
+          />
+          <svg
+            id="search-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="#811c1c"
+            class="bi bi-search me-3"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </div>
+        <img
+          src="assets/Icons/user.png"
+          class="ms-3"
+          height="45px"
+          style="
+            transform: translateY(3px);
+            filter: drop-shadow(0px 0px 3px #00000088);
+          "
+        />
+      </ul>
+    </div>
+  </nav>
+  <div class="px-5 pb-3 primary-element fw-bold position-fixed bg-white w-100">
+    <a
+      class="link-underline link-underline-opacity-0 primary-element"
+      href="./index.html"
+      >Beranda</a
+    >
+    >
+    <a
+      class="link-underline link-underline-opacity-0 primary-element"
+      href="./orta-pemilu.html"
+      >Orta Pemilu</a
+    >
+    > Bagian 1
+  </div>
+  <div
+    class="d-flex flex-row justify-content-center"
+    style="margin: 100px 30vh"
+  >
+    <div class="d-flex flex-row align-items-center">
+      <img src="assets/orta-pemilu.png" width="90%" class="" />
+    </div>
+    <div class="d-flex flex-column align-items-start w-100">
+      <div class="d-flex flex-column align-items-start ms-5">
+        <h2 class="primary-element">BAGIAN 1:</h2>
+        <h2 class="primary-element mb-5" style="font-size: 2.5em">
+          APA ITU PEMILU?
+        </h2>
+      </div>
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col col-md-auto">
+            <div
+              class="d-flex justify-content-center align-items-center text-white fw-semibold fs-3"
+              style="
+                background-color: #811c1c;
+                width: 50px;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              1
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex flex-row justify-content-between align-items-center ps-4 pe-2"
+              style="
+                background-color: #ccccdc;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              <h2 class="primary-element my-auto">Pengenalan</h2>
+              <img src="assets/video.png" />
+            </div>
+          </div>
+          <div class="col col-md-auto">
+            <img
+              class="mt-1"
+              src="assets/check-active.png"
+              height="40px"
+              style="transform: translateX(4px)"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col col-md-auto">
+            <div
+              class="d-flex justify-content-center align-items-center text-white fw-semibold fs-3"
+              style="
+                background-color: #811c1c;
+                width: 50px;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              2
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex flex-row justify-content-between align-items-center ps-4 pe-3"
+              style="
+                background-color: #ccccdc;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              <h2 class="primary-element my-auto">
+                Artikel 1: Pemilu dan Demokrasi
+              </h2>
+              <img src="assets/anchor.png" />
+            </div>
+          </div>
+          <div class="col col-md-auto">
+            <img
+              class="mt-1"
+              src="assets/check-active.png"
+              height="40px"
+              style="transform: translateX(4px)"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col col-md-auto">
+            <div
+              class="d-flex justify-content-center align-items-center text-white fw-semibold fs-3"
+              style="
+                background-color: #811c1c;
+                width: 50px;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              3
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex flex-column justify-content-center align-items-start ps-4 pe-3 pt-3 pb-4"
+              style="background-color: #ccccdc; border-radius: 30px"
+            >
+              <h2 class="primary-element mb-3">Artikel 2: Jenis Pemilu</h2>
+              <div class="d-flex flex-row">
+                <img
+                  class="me-3"
+                  src="./assets/features/feature_suratsuara.png"
+                  style="
+                    width: 240px;
+                    height: 280px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                  "
+                />
+                <div
+                  class="d-flex flex-column justify-content-between align-items-end"
+                >
+                  <p class="fw-semibold primary-element">
+                    Setelah mengetahui apa itu pemilu dan bagaimana dampak dan
+                    peran pemilu dalam kelangsungan negara yang demokratis, mari
+                    selanjutnya kita kupas apa saja jenis-jenis pemilu yang ada.
+                  </p>
+                  <a
+                    class="link-underline link-underline-opacity-0 primary-element"
+                    href="./orta-pemilu-3.html"
+                    ><div class="d-flex flex-row">
+                      <h2 class="primary-element me-2">Baca</h2>
+                      <img
+                        src="assets/anchor.png"
+                        width="30px"
+                        height="20px"
+                        style="transform: rotate(270deg)"
+                      /></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-auto">
+            <img class="mt-1" src="assets/check-inactive.png" height="40px" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col col-md-auto">
+            <div
+              class="d-flex justify-content-center align-items-center text-white fw-semibold fs-3"
+              style="
+                background-color: #811c1c;
+                width: 50px;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              4
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="d-flex flex-row justify-content-between align-items-center ps-4 pe-3"
+              style="
+                background-color: #ccccdc;
+                height: 50px;
+                border-radius: 30px;
+              "
+            >
+              <h2 class="primary-element my-auto">Kuis Bagian 1</h2>
+              <img src="assets/anchor.png" />
+            </div>
+          </div>
+          <div class="col col-md-auto">
+            <img class="mt-1" src="assets/check-inactive.png" height="40px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,124 @@
+.animate-500 {
+    transition: all 200ms;
+}
+
+.animate-1000 {
+    transition: all 200ms;
+}
+
+.animate-easeinout {
+    transition-timing-function: ease-in-out;
+}
+
+
+input:focus, input.form-control:focus, .noshadow:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+h1 {
+    font-family: 'Kanit' !important;
+              font-size: 4em;
+              font-weight: 900;
+              transition: all 10ms;
+              width: 40%;
+              user-select: none;
+              color: #811c1c;
+              filter: brightness(1000%);
+              transform: scaleY(0.8);
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.feature-header {
+    transform: translateY(11em);
+}
+
+
+.nav-link {
+    border-radius: 20pt;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
+.border-25px {
+    border-radius: 25px;
+}
+
+.border-15px {
+    border-radius: 15px;
+}
+
+.ff-poppins {
+    font-family: 'Poppins';
+}
+
+.primary-color {
+    background-color: #811c1c;
+    color: white;
+}
+
+.primary-color:hover {
+    background-color: #811c1c;
+    color: white;
+    filter: brightness(140%);
+}
+
+.primary-element {
+    color: #811c1c;
+}
+
+p {
+    font-size:smaller;
+    font-family: 'Poppins';
+    text-align: justify;
+    user-select: none;
+}
+
+.white-text {
+    color: #fff;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#scrollable::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+#scrollable {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+#bg-reddish {
+    background: url('assets/background.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+  hr.solid {
+    border-top: 3px solid #bbb;
+  }
